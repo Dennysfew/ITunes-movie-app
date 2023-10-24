@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var placeholderLabel: UILabel!
+    @IBOutlet var emptyStateView: UIView!
     
     var movies = [Movie]() {
         didSet {
@@ -31,22 +31,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
         setupTableView()
     }
     
     // MARK: - Private Methods
-    
-    private func setupUI() {
-        view.backgroundColor = .systemBackground
-        
-        // Placeholder label setup
-        placeholderLabel.text = "Type something"
-        placeholderLabel.textColor = .lightGray
-        placeholderLabel.isHidden = true
-        view.addSubview(placeholderLabel)
-    }
-    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,12 +63,6 @@ extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let trimmedText = searchText.trimmingCharacters(in: .whitespaces)
         
-        if trimmedText.isEmpty {
-            placeholderLabel.isHidden = false
-        } else {
-            placeholderLabel.isHidden = true
-        }
-        
         // Cancel the previous debounce work item if it exists
         searchDebouncer?.cancel()
         
@@ -100,6 +83,11 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if movies.isEmpty {
+            emptyStateView.isHidden = false
+        } else {
+            emptyStateView.isHidden = true
+        }
         return movies.count
     }
     
@@ -120,7 +108,7 @@ extension HomeViewController: UITableViewDelegate {
         return 400
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMovieURLString = movies[indexPath.row].trackViewURL ?? ""
+        let selectedMovieURLString = movies[indexPath.row].trackViewURL
         openMovieInBrowser(urlString: selectedMovieURLString)
     }
     

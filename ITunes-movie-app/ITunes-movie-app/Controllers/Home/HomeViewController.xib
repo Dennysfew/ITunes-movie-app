@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ITunes_movie_app" customModuleProvider="target">
             <connections>
-                <outlet property="placeholderLabel" destination="5wB-dD-xau" id="pDZ-rU-Z1r"/>
+                <outlet property="emptyStateView" destination="fVv-iy-Uqx" id="75l-BI-K7C"/>
                 <outlet property="searchBar" destination="ikf-ca-1qO" id="OPa-f3-DPW"/>
                 <outlet property="tableView" destination="Y9N-Vq-m08" id="uX0-br-WJ8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -38,27 +39,39 @@
                     <rect key="frame" x="0.0" y="214.66666666666669" width="393" height="603.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-dD-xau">
-                    <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVv-iy-Uqx">
+                    <rect key="frame" x="0.0" y="214.66666666666669" width="393" height="603.33333333333326"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No movies to display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-dD-xau">
+                            <rect key="frame" x="84.666666666666686" y="287.33333333333337" width="224" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="textColor" red="0.82745098039999998" green="0.3803921569" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5wB-dD-xau" firstAttribute="centerY" secondItem="fVv-iy-Uqx" secondAttribute="centerY" id="Q4J-bC-cJo"/>
+                        <constraint firstItem="5wB-dD-xau" firstAttribute="centerX" secondItem="fVv-iy-Uqx" secondAttribute="centerX" id="qXo-NF-P8f"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ikf-ca-1qO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="3f0-hd-XOo"/>
                 <constraint firstItem="KBi-wx-XvS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4ht-7P-5SP"/>
-                <constraint firstItem="5wB-dD-xau" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5pu-YD-Cyt"/>
+                <constraint firstItem="fVv-iy-Uqx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7OK-U9-gUZ"/>
                 <constraint firstAttribute="trailing" secondItem="KBi-wx-XvS" secondAttribute="trailing" constant="16" id="MWP-AP-8B5"/>
-                <constraint firstItem="5wB-dD-xau" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OOl-xS-KXs"/>
                 <constraint firstItem="KBi-wx-XvS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="STB-wN-pL1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y9N-Vq-m08" secondAttribute="bottom" id="So0-cj-w4A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fVv-iy-Uqx" secondAttribute="bottom" id="Xp4-WY-EF8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y9N-Vq-m08" secondAttribute="trailing" id="cgm-R8-bC0"/>
                 <constraint firstItem="Y9N-Vq-m08" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ovS-ul-yg5"/>
                 <constraint firstItem="Y9N-Vq-m08" firstAttribute="top" secondItem="ikf-ca-1qO" secondAttribute="bottom" id="q4K-5W-L7A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ikf-ca-1qO" secondAttribute="trailing" constant="16" id="sdL-8y-UOa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fVv-iy-Uqx" secondAttribute="trailing" id="suf-RC-7Zg"/>
+                <constraint firstItem="fVv-iy-Uqx" firstAttribute="top" secondItem="ikf-ca-1qO" secondAttribute="bottom" id="v8r-hf-4Vc"/>
                 <constraint firstItem="ikf-ca-1qO" firstAttribute="top" secondItem="KBi-wx-XvS" secondAttribute="bottom" constant="15" id="za3-SO-mEc"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
