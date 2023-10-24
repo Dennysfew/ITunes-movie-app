@@ -18,6 +18,12 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet var moviePoster: UIImageView!
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var shareButton: UIButton!
+    @IBOutlet var visualEffectView: UIVisualEffectView! {
+        didSet {
+            visualEffectView.layer.cornerRadius = 8
+            visualEffectView.layer.masksToBounds = true
+        }
+    }
     
     private let imageModificationSize = "/250x250bb.jpg"
     private let imageDefaultSize = "/100x100bb.jpg"
