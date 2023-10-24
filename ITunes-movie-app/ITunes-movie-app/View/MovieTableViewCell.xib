@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,6 +40,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cLp-Zm-DS8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-hZ-ADb">
                                 <rect key="frame" x="231" y="25" width="15" height="15"/>
@@ -94,10 +98,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="genreNameLb" destination="ifO-uM-IvQ" id="PfG-oH-G9F"/>
+                <outlet property="likeButton" destination="UV1-wp-42N" id="1bg-gY-aFh"/>
                 <outlet property="moviePoster" destination="82F-JI-ah2" id="S9u-Hd-j4J"/>
                 <outlet property="movieTitle" destination="j8S-VG-87x" id="och-IW-4mh"/>
                 <outlet property="releaseDateLb" destination="iAP-jN-y6u" id="SOd-n3-dDP"/>
-                <outlet property="shareButton" destination="LGY-hZ-ADb" id="Gqj-H3-tgO"/>
+                <outlet property="shareButton" destination="LGY-hZ-ADb" id="e4B-PY-ibR"/>
                 <outlet property="vContent" destination="5tD-pl-bCc" id="ZnK-7O-c3J"/>
             </connections>
             <point key="canvasLocation" x="65.648854961832058" y="87.676056338028175"/>
@@ -105,9 +110,9 @@
     </objects>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
