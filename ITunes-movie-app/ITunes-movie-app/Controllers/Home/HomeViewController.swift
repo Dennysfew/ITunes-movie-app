@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController {
     
@@ -117,5 +118,18 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMovieURLString = movies[indexPath.row].trackViewURL ?? ""
+        openMovieInBrowser(urlString: selectedMovieURLString)
+    }
+    
+    private func openMovieInBrowser(urlString: String) {
+        if let movieURL = URL(string: urlString) {
+            let safariViewController = SFSafariViewController(url: movieURL)
+            present(safariViewController, animated: true, completion: nil)
+        } else {
+            print("Invalid URL: \(urlString)")
+        }
     }
 }

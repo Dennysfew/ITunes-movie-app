@@ -34,7 +34,6 @@ struct Movie: Codable, Identifiable {
     let artistID: Int?
     let trackID: Int
     let artistName, trackName, trackCensoredName: String
-    let artistViewURL: String?
     let trackViewURL: String
     let previewURL: String?
     let artworkUrl30, artworkUrl60, artworkUrl100: String
@@ -57,7 +56,6 @@ struct Movie: Codable, Identifiable {
         case artistID = "artistId"
         case trackID = "trackId"
         case artistName, trackName, trackCensoredName
-        case artistViewURL = "artistViewUrl"
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
         case artworkUrl30, artworkUrl60, artworkUrl100, collectionPrice, trackPrice, trackRentalPrice
