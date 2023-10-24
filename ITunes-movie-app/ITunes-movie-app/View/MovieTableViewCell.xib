@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,9 +21,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-pl-bCc">
                         <rect key="frame" x="12" y="12" width="296" height="281"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82F-JI-ah2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82F-JI-ah2">
                                 <rect key="frame" x="30" y="0.0" width="236" height="281"/>
                             </imageView>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ7-JR-MO7">
+                                <rect key="frame" x="30" y="0.0" width="236" height="281"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2nR-jJ-35r">
+                                    <rect key="frame" x="0.0" y="0.0" width="236" height="281"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemChromeMaterialDark"/>
+                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8S-VG-87x">
                                 <rect key="frame" x="50" y="57.333333333333336" width="196" height="26.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -37,8 +46,11 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cLp-Zm-DS8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-hZ-ADb">
                                 <rect key="frame" x="231" y="25" width="15" height="15"/>
@@ -48,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifO-uM-IvQ">
@@ -69,7 +81,10 @@
                             <constraint firstAttribute="trailing" secondItem="LGY-hZ-ADb" secondAttribute="trailing" constant="50" id="0xw-mk-l3c"/>
                             <constraint firstItem="82F-JI-ah2" firstAttribute="leading" secondItem="5tD-pl-bCc" secondAttribute="leading" constant="30" id="23A-09-27y"/>
                             <constraint firstItem="j8S-VG-87x" firstAttribute="centerY" secondItem="5tD-pl-bCc" secondAttribute="centerY" constant="-70" id="3KE-Oe-Lnj"/>
+                            <constraint firstItem="tJ7-JR-MO7" firstAttribute="top" secondItem="5tD-pl-bCc" secondAttribute="top" id="3WP-oB-CMK"/>
                             <constraint firstItem="iAP-jN-y6u" firstAttribute="leading" secondItem="ifO-uM-IvQ" secondAttribute="trailing" constant="18" id="9k9-pM-YTg"/>
+                            <constraint firstAttribute="bottom" secondItem="tJ7-JR-MO7" secondAttribute="bottom" id="K8q-L4-F88"/>
+                            <constraint firstAttribute="trailing" secondItem="tJ7-JR-MO7" secondAttribute="trailing" constant="30" id="LhA-mL-Wtc"/>
                             <constraint firstAttribute="trailing" secondItem="j8S-VG-87x" secondAttribute="trailing" constant="50" id="YrI-W0-FjK"/>
                             <constraint firstItem="j8S-VG-87x" firstAttribute="leading" secondItem="5tD-pl-bCc" secondAttribute="leading" constant="50" id="aBe-jy-eaA"/>
                             <constraint firstAttribute="trailing" secondItem="82F-JI-ah2" secondAttribute="trailing" constant="30" id="bup-9i-jmw"/>
@@ -80,6 +95,7 @@
                             <constraint firstItem="82F-JI-ah2" firstAttribute="top" secondItem="5tD-pl-bCc" secondAttribute="top" id="mVs-9C-sKR"/>
                             <constraint firstItem="UV1-wp-42N" firstAttribute="leading" secondItem="5tD-pl-bCc" secondAttribute="leading" constant="50" id="n5v-Zt-9rM"/>
                             <constraint firstItem="LGY-hZ-ADb" firstAttribute="top" secondItem="5tD-pl-bCc" secondAttribute="top" constant="25" id="nLf-jK-wew"/>
+                            <constraint firstItem="tJ7-JR-MO7" firstAttribute="leading" secondItem="5tD-pl-bCc" secondAttribute="leading" constant="30" id="oaz-jI-a9q"/>
                             <constraint firstItem="iAP-jN-y6u" firstAttribute="centerY" secondItem="ifO-uM-IvQ" secondAttribute="centerY" id="tMn-Vs-zSt"/>
                         </constraints>
                     </view>
@@ -94,20 +110,22 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="genreNameLb" destination="ifO-uM-IvQ" id="PfG-oH-G9F"/>
+                <outlet property="likeButton" destination="UV1-wp-42N" id="1bg-gY-aFh"/>
                 <outlet property="moviePoster" destination="82F-JI-ah2" id="S9u-Hd-j4J"/>
                 <outlet property="movieTitle" destination="j8S-VG-87x" id="och-IW-4mh"/>
                 <outlet property="releaseDateLb" destination="iAP-jN-y6u" id="SOd-n3-dDP"/>
-                <outlet property="shareButton" destination="LGY-hZ-ADb" id="Gqj-H3-tgO"/>
+                <outlet property="shareButton" destination="LGY-hZ-ADb" id="e4B-PY-ibR"/>
                 <outlet property="vContent" destination="5tD-pl-bCc" id="ZnK-7O-c3J"/>
+                <outlet property="visualEffectView" destination="tJ7-JR-MO7" id="WEC-fU-Tyj"/>
             </connections>
             <point key="canvasLocation" x="65.648854961832058" y="87.676056338028175"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -29,6 +29,8 @@
 		94C1738B2AE7990800737FA1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1738A2AE7990800737FA1 /* CustomTextField.swift */; };
 		94C1738E2AE79AC600737FA1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94C1738D2AE79AC600737FA1 /* KeychainSwift */; };
 		94C173912AE79BAA00737FA1 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 94C173902AE79BAA00737FA1 /* SwiftKeychainWrapper */; };
+		94C173972AE7B31D00737FA1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C173962AE7B31D00737FA1 /* CoreDataStack.swift */; };
+		94C1739A2AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C173982AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		94993F292ADDC8750010ABF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94993F2B2ADDC8750010ABF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C1738A2AE7990800737FA1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		94C173962AE7B31D00737FA1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		94C173992AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedMovieDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		94993F1C2ADDC8740010ABF6 /* ITunes-movie-app */ = {
 			isa = PBXGroup;
 			children = (
+				94C173922AE7B22500737FA1 /* CoreData */,
 				941D1B5E2ADE6C36007842FE /* Managers */,
 				941D1B6A2ADE9F9D007842FE /* View */,
 				941D1B5D2ADE6C23007842FE /* Models */,
@@ -190,6 +195,15 @@
 				94C1738A2AE7990800737FA1 /* CustomTextField.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		94C173922AE7B22500737FA1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				94C173962AE7B31D00737FA1 /* CoreDataStack.swift */,
+				94C173982AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +297,9 @@
 				94993F222ADDC8740010ABF6 /* MainTabBarViewController.swift in Sources */,
 				941D1B632ADE78F7007842FE /* NetworkRequest.swift in Sources */,
 				941D1B572ADE64C2007842FE /* SelectedViewController.swift in Sources */,
+				94C1739A2AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodeld in Sources */,
 				94993F1E2ADDC8740010ABF6 /* AppDelegate.swift in Sources */,
+				94C173972AE7B31D00737FA1 /* CoreDataStack.swift in Sources */,
 				941D1B532ADE64B0007842FE /* ProfileViewController.swift in Sources */,
 				94C1738B2AE7990800737FA1 /* CustomTextField.swift in Sources */,
 				94993F202ADDC8740010ABF6 /* SceneDelegate.swift in Sources */,
@@ -541,6 +557,19 @@
 			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		94C173982AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94C173992AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodel */,
+			);
+			currentVersion = 94C173992AE7B4A500737FA1 /* SavedMovieDataModel.xcdatamodel */;
+			path = SavedMovieDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 94993F122ADDC8740010ABF6 /* Project object */;
 }
