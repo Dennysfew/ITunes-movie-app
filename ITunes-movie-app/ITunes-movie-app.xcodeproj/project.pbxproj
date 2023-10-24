@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9411B3A02AE7924C002ECDF8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411B39E2AE7924C002ECDF8 /* SignInViewController.swift */; };
+		9411B3A12AE7924C002ECDF8 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9411B39F2AE7924C002ECDF8 /* SignInViewController.xib */; };
 		941D1B4F2ADE6464007842FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D1B4D2ADE6463007842FE /* HomeViewController.swift */; };
 		941D1B502ADE6464007842FE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941D1B4E2ADE6463007842FE /* HomeViewController.xib */; };
 		941D1B532ADE64B0007842FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D1B512ADE64B0007842FE /* ProfileViewController.swift */; };
@@ -24,9 +26,14 @@
 		94993F222ADDC8740010ABF6 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94993F212ADDC8740010ABF6 /* MainTabBarViewController.swift */; };
 		94993F272ADDC8750010ABF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94993F262ADDC8750010ABF6 /* Assets.xcassets */; };
 		94993F2A2ADDC8750010ABF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94993F282ADDC8750010ABF6 /* LaunchScreen.storyboard */; };
+		94C1738B2AE7990800737FA1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1738A2AE7990800737FA1 /* CustomTextField.swift */; };
+		94C1738E2AE79AC600737FA1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94C1738D2AE79AC600737FA1 /* KeychainSwift */; };
+		94C173912AE79BAA00737FA1 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 94C173902AE79BAA00737FA1 /* SwiftKeychainWrapper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9411B39E2AE7924C002ECDF8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9411B39F2AE7924C002ECDF8 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		941D1B4D2ADE6463007842FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		941D1B4E2ADE6463007842FE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		941D1B512ADE64B0007842FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 		94993F262ADDC8750010ABF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94993F292ADDC8750010ABF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94993F2B2ADDC8750010ABF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C1738A2AE7990800737FA1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,19 +60,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C1738E2AE79AC600737FA1 /* KeychainSwift in Frameworks */,
 				941D1B6D2ADEADF1007842FE /* Kingfisher in Frameworks */,
+				94C173912AE79BAA00737FA1 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9411B3A22AE79253002ECDF8 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				9411B39E2AE7924C002ECDF8 /* SignInViewController.swift */,
+				9411B39F2AE7924C002ECDF8 /* SignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		941D1B4C2ADE6440007842FE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				941D1B5C2ADE64F7007842FE /* Home */,
 				941D1B5B2ADE64ED007842FE /* Profile */,
 				941D1B592ADE64CF007842FE /* Selected */,
+				9411B3A22AE79253002ECDF8 /* SignIn */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +144,7 @@
 		941D1B6A2ADE9F9D007842FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94C173892AE798F600737FA1 /* Custom */,
 				941D1B662ADE9F97007842FE /* MovieTableViewCell.swift */,
 				941D1B672ADE9F97007842FE /* MovieTableViewCell.xib */,
 			);
@@ -163,6 +184,14 @@
 			path = "ITunes-movie-app";
 			sourceTree = "<group>";
 		};
+		94C173892AE798F600737FA1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				94C1738A2AE7990800737FA1 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +210,8 @@
 			name = "ITunes-movie-app";
 			packageProductDependencies = (
 				941D1B6C2ADEADF1007842FE /* Kingfisher */,
+				94C1738D2AE79AC600737FA1 /* KeychainSwift */,
+				94C173902AE79BAA00737FA1 /* SwiftKeychainWrapper */,
 			);
 			productName = "ITunes-movie-app";
 			productReference = 94993F1A2ADDC8740010ABF6 /* ITunes-movie-app.app */;
@@ -212,6 +243,8 @@
 			mainGroup = 94993F112ADDC8740010ABF6;
 			packageReferences = (
 				941D1B6B2ADEADF1007842FE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				94C1738C2AE79AC600737FA1 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				94C1738F2AE79BAA00737FA1 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = 94993F1B2ADDC8740010ABF6 /* Products */;
 			projectDirPath = "";
@@ -231,6 +264,7 @@
 				94993F2A2ADDC8750010ABF6 /* LaunchScreen.storyboard in Resources */,
 				941D1B692ADE9F97007842FE /* MovieTableViewCell.xib in Resources */,
 				94993F272ADDC8750010ABF6 /* Assets.xcassets in Resources */,
+				9411B3A12AE7924C002ECDF8 /* SignInViewController.xib in Resources */,
 				941D1B542ADE64B0007842FE /* ProfileViewController.xib in Resources */,
 				941D1B502ADE6464007842FE /* HomeViewController.xib in Resources */,
 			);
@@ -243,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411B3A02AE7924C002ECDF8 /* SignInViewController.swift in Sources */,
 				941D1B682ADE9F97007842FE /* MovieTableViewCell.swift in Sources */,
 				941D1B602ADE6CCF007842FE /* MovieModel.swift in Sources */,
 				94993F222ADDC8740010ABF6 /* MainTabBarViewController.swift in Sources */,
@@ -250,6 +285,7 @@
 				941D1B572ADE64C2007842FE /* SelectedViewController.swift in Sources */,
 				94993F1E2ADDC8740010ABF6 /* AppDelegate.swift in Sources */,
 				941D1B532ADE64B0007842FE /* ProfileViewController.swift in Sources */,
+				94C1738B2AE7990800737FA1 /* CustomTextField.swift in Sources */,
 				94993F202ADDC8740010ABF6 /* SceneDelegate.swift in Sources */,
 				941D1B4F2ADE6464007842FE /* HomeViewController.swift in Sources */,
 				941D1B652ADE79A3007842FE /* NetworkMoviesFetch.swift in Sources */,
@@ -470,6 +506,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		94C1738C2AE79AC600737FA1 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+		94C1738F2AE79BAA00737FA1 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -477,6 +529,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 941D1B6B2ADEADF1007842FE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		94C1738D2AE79AC600737FA1 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94C1738C2AE79AC600737FA1 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		94C173902AE79BAA00737FA1 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94C1738F2AE79BAA00737FA1 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

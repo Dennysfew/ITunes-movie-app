@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="ITunes_movie_app" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="yFT-k7-iFI" id="amP-Xl-E4H"/>
+                <outlet property="passwordTextField" destination="3Rk-RT-zE2" id="V2H-aU-Dvr"/>
+                <outlet property="signInButton" destination="v6s-2c-BfF" id="oTP-jD-2Og"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAX-Po-F5l">
+                    <rect key="frame" x="153.66666666666666" y="99" width="86" height="34"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yFT-k7-iFI" customClass="CustomTextField" customModule="ITunes_movie_app" customModuleProvider="target">
+                    <rect key="frame" x="10" y="203" width="373" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Pz9-Sf-P4B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-RT-zE2" customClass="CustomTextField" customModule="ITunes_movie_app" customModuleProvider="target">
+                    <rect key="frame" x="10" y="280" width="373" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="FUI-pT-Hk5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6s-2c-BfF">
+                    <rect key="frame" x="30" y="412" width="333" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="VHR-nQ-JMp"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Sign in">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                        <color key="baseBackgroundColor" red="0.82745098039215681" green="0.38039215686274508" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signInDidTapped:" destination="-1" eventType="touchUpInside" id="8jq-OD-992"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are completely safe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-jM-7uN">
+                    <rect key="frame" x="127.33333333333333" y="480" width="138.33333333333337" height="14.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read our Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-jv-C5G">
+                    <rect key="frame" x="112.33333333333333" y="502.33333333333331" width="168.33333333333337" height="14.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" red="0.82745098039215681" green="0.38039215686274508" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.96818340448271523" green="0.96694266332887358" blue="0.98861532078848946" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="bKP-jM-7uN" firstAttribute="top" secondItem="v6s-2c-BfF" secondAttribute="bottom" constant="18" id="4ee-iS-CWY"/>
+                <constraint firstItem="v6s-2c-BfF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="AEN-qg-9XD"/>
+                <constraint firstItem="dAX-Po-F5l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="CJs-cG-c8z"/>
+                <constraint firstItem="I8O-jv-C5G" firstAttribute="top" secondItem="bKP-jM-7uN" secondAttribute="bottom" constant="8" id="IhM-iM-a6w"/>
+                <constraint firstItem="I8O-jv-C5G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KgI-DI-Zfd"/>
+                <constraint firstItem="v6s-2c-BfF" firstAttribute="top" secondItem="3Rk-RT-zE2" secondAttribute="bottom" constant="80" id="Kwx-Sc-Gpe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v6s-2c-BfF" secondAttribute="trailing" constant="30" id="NUQ-D3-RZc"/>
+                <constraint firstItem="yFT-k7-iFI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="SMU-bK-Vhm"/>
+                <constraint firstItem="bKP-jM-7uN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UMk-7N-uoh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Rk-RT-zE2" secondAttribute="trailing" constant="10" id="VSb-Y3-ElS"/>
+                <constraint firstItem="3Rk-RT-zE2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="XdA-5d-mLV"/>
+                <constraint firstItem="3Rk-RT-zE2" firstAttribute="top" secondItem="yFT-k7-iFI" secondAttribute="bottom" constant="25" id="cH6-fH-WPH"/>
+                <constraint firstItem="dAX-Po-F5l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cv8-BP-Olf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yFT-k7-iFI" secondAttribute="trailing" constant="10" id="izT-Jg-Qdg"/>
+                <constraint firstItem="yFT-k7-iFI" firstAttribute="top" secondItem="dAX-Po-F5l" secondAttribute="bottom" constant="70" id="zcn-VR-bJV"/>
+            </constraints>
+            <point key="canvasLocation" x="127" y="20"/>
+        </view>
+    </objects>
+</document>
